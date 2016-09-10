@@ -1,0 +1,650 @@
+
+
+
+
+img#doughnutHospital {
+    max-width: 1119px;
+    width: 100%;
+    height: auto;
+}
+img#lineUnit {
+    width: 100%;
+    max-width: 1119px;
+    height: auto;
+}
+img#barShift {
+    width: 100%;
+    max-width: 1119px;
+    height: auto;
+}
+img#barProf {
+	width: 100%;
+    max-width: 1119px;
+    height: auto;
+}
+img#barEvent {
+    width: 100%;
+    max-width: 1119px;
+    height: auto;
+}
+img#pieMedia {
+    width: 100%;
+    max-width: 1119px;
+    height: auto;
+}
+
+
+canvas#doughnutHospital {
+    max-width: 400px!important;
+    width: 100%!important;
+    height: auto!important;
+    float: left;
+}
+canvas#lineUnit {
+    max-width: 600px!important;
+    width: 100%!important;
+    height: auto!important;
+}
+canvas#barShift {
+    max-width: 1119px!important;
+    width: 100%!important;
+    height: auto!important;
+}
+canvas#barProf {
+	max-width: 1119px!important;
+    width: 100%!important;
+    height: auto!important;
+}
+canvas#barEvent {
+   max-width: 1119px!important;
+    width: 100%!important;
+    height: auto!important;
+}
+canvas#pieMedia {
+    max-width: 500px!important;
+    width: 85%!important;
+    height: auto!important;
+}
+
+.content-wrapper{
+    padding: 10px;
+    margin-bottom: -30px;
+}
+
+div.container.line-up{
+    background-color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+.main-header .logo img{
+    margin-top: 5px;
+}
+.dashboard-hospital-header h1{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    /*margin-left: 15px;*/
+    margin-top: 5px;
+}
+
+.line-down{
+    /*margin-top: 30px;*/
+    /*margin-bottom: 20px;*/
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+.line-down .graph{
+    width: 23%;
+    min-width: 200px;
+    height: auto;
+    display: inline-block;
+    padding: 5px;
+    background-color: #fff;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    min-height: 350px;
+}
+.line-down .graph:last-child{
+    margin-right: 0;
+    position: relative;
+}
+.chart-container {
+    text-align: center;
+}
+
+.graph-up {
+    min-width: 250px!important;
+    width: 30%!important;
+     /*height: 60%!important; */
+    height: 370px;
+    float: left;
+    /*margin-bottom: 30px;*/
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 5% 5px;
+}
+.graph-up.big-graph{
+    min-width: 250px!important;
+    width: 65%!important;
+     /*height: 60%!important; */
+    height: 370px;
+    float: right;
+    margin: 0 auto;
+    /*margin-bottom: 30px;*/
+    background-color: #fff;
+    padding: 20px 5px;
+
+}
+.graph chart-legend{
+    position: absolute;
+    width: 100%;
+    /*bottom: 10%;*/
+    display: block;
+    z-index: 9999;
+    visibility: visible;
+}
+
+.boxuserupdate .box-header {
+    background: #FFFFFF!important;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-header{
+        padding: 15px 15px;/*Changed by Jaimin PAtel from padding 10px 15px to 15px 15px*/
+}
+
+.graph h3{
+    font-size: 18px;
+    text-align: center;
+}
+.line-up h3:nth-child(3) {
+    display: none;
+}
+.line-up h3:first-child {
+    text-align: center;
+    font-size: 18px
+}
+
+.select-unit {
+    width: 100%;
+    max-width: 570px;
+    /*margin-bottom: 20px;*/
+    text-align: right;
+    float: right;
+    min-height: 40px;
+    display: inline-block;
+    /*padding: 0 10px;*/
+}
+.select-unit select{
+    width: 100px!important;
+    line-height: 30px;
+    height: 37px;
+    border: 0;
+    font-weight: bold;
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.datepicker-box{
+    width: 100px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 4px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    margin-right: -5px;
+    /*margin-bottom: 20px;*/
+    font-weight: bold;
+}
+.dates {
+    background-color: #fff;
+        padding: 8px;
+    padding-bottom: 9px;
+    width: 235px;
+    display: inline-block;
+
+}
+
+.dates a {
+    border: 2px solid #ddd;
+    padding: 3px 7px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 5px;
+}
+
+.dates a:hover{
+    color: rgba(4,195,227,1);
+    text-decoration: none;
+    border: 2px solid rgba(4,195,227,1);
+}
+
+/*
+.dates a:active{
+    color: #337ab7;
+    text-decoration: none;
+    border: 2px solid #337ab7;
+}
+.dates a:focus{
+    color: #337ab7;
+    text-decoration: none;
+    border: 2px solid #337ab7;
+}
+ */
+
+.datesselected{
+ color: rgba(4,195,227,1)!important;
+    text-decoration: none!important;
+    border: 2px solid rgba(4,195,227,1)!important;
+}
+
+.select-unit button{
+    display: inline-block;
+    margin-left: 10px;
+    background-color: rgba(4,195,227,1);
+    border: 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+.select-unit button:hover{
+    background-color: #000
+}
+
+input.datepicker-on.ng-pristine.ng-valid.ng-touched {
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 29px;
+}
+input.datepicker-on.ng-pristine.ng-untouched.ng-valid {
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 29px;
+}
+input.datepicker-on.ng-valid.ng-touched.ng-dirty.ng-valid-parse{
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 29px;
+}
+
+.row {
+    width: 100%!important;
+}
+
+.line-down.level1 .graph{
+    width: 100%!important;
+}
+
+canvas#barProfHor {
+   width: 100%!important;
+    height: auto;
+        /*max-height: 200px;*/
+}
+div.level1 canvas#barProfHor {
+   width: 100%!important;
+    height: auto;
+    max-height: 200px;
+}
+canvas#pie-chart-area{
+    width: 100%!important;
+    height: auto;
+}
+
+.line-down.level2 .graph{
+    width: 50%!important;
+}
+
+.col-md-12.line-up.level1 {
+    margin: 20px auto;
+}
+.level1 .graph-up.big-graph {
+    width: 100%!important;
+}
+canvas#linechart {
+    width: 100%!important;
+    height: auto!important;
+    max-height: 330px;
+}
+.level1 .graph-up.small-graph {
+    width: 100%!important;
+}
+
+
+
+
+
+
+
+.content-wrapper .chart-container:nth-child(7){
+    width: 100%!important;
+    max-width: 250px!important;
+}
+.content-wrapper .chart-container:nth-child(9){
+    width: 100%!important;
+    max-width: 250px!important;
+}
+.content-wrapper .chart-container:nth-child(11){
+    width: 100%!important;
+    max-width: 250px!important;
+}
+
+.content-wrapper .chart-container:nth-child(13){
+    width: 100%!important;
+    max-width: 250px!important;
+}
+
+@media(max-width: 480px){
+    .datepicker-box{
+        margin: -3px;
+    }
+    .select-unit button{
+        margin: 0;
+    }
+
+    .tab-content div.tab-pane div.boxuserupdate {
+        padding: 0;
+    }
+    .nav-tabs-custom>.tab-content{
+        padding: 0; 
+    }
+    section.content-header.dashboard-hospital-header {
+        padding: 0;
+    }
+    section.content-header.dashboard-hospital-header div.row div.col-xs-12 {
+        padding-right: 0;
+    }
+    .line-down.level2 .graph {
+        width: 100%!important;
+    }
+    .line-down .graph{
+        min-height: 200px;
+    }
+    .container.line-up.level2 {
+        padding: 0;
+    }
+    .graph-up.big-graph {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .container.line-up.level2 .graph-up.big-graph {
+        margin: 10px 0!important;
+        padding: 10px 0!important;
+        width: 100%!important;
+    }
+    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hide-tablet {
+        display: none;
+    }
+    .nav > li > a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 890px) {
+    .nav > li > a {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+@media screen and (max-width: 1046px){
+    .graph-up {
+        width: 100%!important;
+        min-width: 250px!important;
+        max-width: 500px!important;
+        
+         height: auto!important; 
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        padding: 2% 0;
+
+    }
+    .chart-container{
+        text-align: center;
+    }
+    canvas#doughnutHospital{
+        float: none;
+    }
+    .graph-up.big-graph{
+        min-width: 250px!important;
+        width: 65%!important;
+         height: auto!important; 
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+	div.chart-container{
+		margin-bottom: 30px;
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.content-wrapper, .right-side h3{
+		margin-top: 30px;
+	}
+
+
+    .col-xs-6 {
+        width: 100%;
+    }
+    .dataTables_filter {
+        text-align: center;
+    }
+    div.dataTables_filter input {
+        width: 14em;
+    }
+    div.dataTables_filter label {
+        float: left;
+    }
+    .hide-phone {
+        display: none;
+    }
+    .nav > li {
+        float: none;
+    }
+    .nav-tabs-custom > .nav-tabs > li {
+        border-top:1px solid #ddd;
+    }
+    .nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a {
+        background-color: #3c8dbc;
+        color: #fff;
+    }
+    .dataTables_wrapper {
+        overflow-x: auto;
+        min-width: 0.01%;
+    }
+    div.dataTables_length label {
+        float: none;
+    }
+    .dataTables_length {
+        text-align: center;
+    }
+    .dataTables_wrapper table {
+        width: 500px;
+    }
+    div.dataTables_info {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    div.dataTables_paginate {
+        float: none;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 1150px){
+    .line-down .graph {
+    width: 30%;
+    }
+}
+
+@media(max-width: 1000px){
+    .line-down .graph {
+        width: 46%;
+    }
+    .graph chart-legend{
+        bottom: 5%;
+    }
+}
+
+.small-graph chart-legend{
+    width: 100%;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+
+@media(min-width: 1200px){
+    .line-down {
+        clear: both;
+        display: flex;
+    }
+    .line-down .graph{
+        width: 24%;
+    }
+}
+
+/*For Loader By Jaimin PAtel*/
+
+
+.loader {
+	top: 12%;
+    left: 40px;
+    z-index: 99999;
+    background: #716262;
+    opacity: 0.8;
+    position: absolute !important;
+    height: 100%;
+    width: 96%;
+}
+.loader-inner{ position: absolute; top:48%;left:45%;}
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}

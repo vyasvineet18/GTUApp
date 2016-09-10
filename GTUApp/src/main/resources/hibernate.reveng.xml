@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="Dev_Hyginex"/>
+  <table-filter match-name="contact"/>
+  <table-filter match-name="dispenser"/>
+  <table-filter match-name="events"/>
+  <table-filter match-name="roleprotectedobject"/>
+  <table-filter match-name="customer"/>
+  <table-filter match-name="room"/>
+  <table-filter match-name="wristband_mst"/>
+  <table-filter match-name="lookup"/>
+  <table-filter match-name="customer_contact"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="user_wristband"/>
+  <table-filter match-name="beacon"/>
+  <table-filter match-name="unit"/>
+  <table-filter match-name="address"/>
+  <table-filter match-name="customer_address"/>
+  <table-filter match-name="beacon_mst"/>
+  <table-filter match-name="department"/>
+  <table-filter match-name="protectedobject"/>
+  <table-filter match-name="dispenser_mst"/>
+  <table-filter match-name="user_role"/>
+  <table-filter match-name="unit_floorplan"/>
+  <table-filter match-name="state_machine"/>
+  <table-filter match-name="lookupitem"/>
+  <table-filter match-name="role"/>
+</hibernate-reverse-engineering>

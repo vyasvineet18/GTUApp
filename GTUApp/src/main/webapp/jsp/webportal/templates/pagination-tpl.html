@@ -1,0 +1,9 @@
+<ul class="pagination"> 
+    <li>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" ng-click="navigate('previous')" ng-disabled="paginationObject.currentPage === 1 ">Previous</button>
+            <button type="button" class="btn btn-default" style="background-color: #337ab7;border-color: #337ab7;"><span style="color: white">{{paginationObject.currentPage}}</span></button>
+            <button type="button" class="btn btn-default" ng-click="navigate('next')" ng-disabled="paginationObject.currentPage === paginationObject.lastPage">Next</button>
+        </div>
+    </li>
+</ul>
