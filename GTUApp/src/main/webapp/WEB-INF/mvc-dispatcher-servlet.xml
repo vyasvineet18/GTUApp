@@ -27,6 +27,7 @@
     <context:component-scan base-package="com.gtuapp.entity" />
     <context:component-scan base-package="com.gtuapp.service.ibase" />
     <context:component-scan base-package="com.gtuapp.service.impl" />
+    <context:component-scan base-package="springfox.petstore.controller"/>
 
 
     <bean id="jspViewResolver"
@@ -62,7 +63,15 @@
         <property name="jndiName" value="java:jboss/datasources/hyginexDS"/>
     </bean>-->
     
- 
+    <!-- Scan some API controllers-->
+    
+
+    <!-- Enables swgger ui-->
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+
+    <!-- Include a swagger configuration-->
+    <bean name="/applicationSwaggerConfig" class="com.gtuapp.swagger.ApplicationSwaggerConfig"/> 
  
     <bean id="sessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

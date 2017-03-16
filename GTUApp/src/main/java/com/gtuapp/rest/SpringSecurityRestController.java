@@ -15,7 +15,8 @@ import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.RedirectView;
 
 /**
- *
+ *default username : vyasvineet18@gmail.com
+ *default password : admin
  * @author vinits
  */
 @Controller

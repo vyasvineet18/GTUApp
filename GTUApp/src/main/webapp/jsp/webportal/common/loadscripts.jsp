@@ -17,8 +17,10 @@
 <script src="${pageContext.request.contextPath}/jsp/webportal/templates/ui-bootstrap-tpls.js"></script>
  --%>
 
-
-
+<!-- load External JS Files -->
+<script src="${pageContext.request.contextPath}/jsp/webportal/templates/pagination-tpl.js"></script>
+<script src="${pageContext.request.contextPath}/jsp/webportal/templates/angular-idle.min.js"></script>
+<script src="${pageContext.request.contextPath}/jsp/webportal/templates/ui-bootstrap-tpls.js"></script>
 
 <!-- Added for mapplic -->
 

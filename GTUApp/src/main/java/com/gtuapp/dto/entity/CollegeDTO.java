@@ -25,6 +25,7 @@ public class CollegeDTO {
 	private Boolean isHostel;
 	private Boolean isTransportation;
 	private Boolean isCanteen;
+	
 	public Integer getCollegeId() {
 		return collegeId;
 	}

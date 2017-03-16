@@ -7,10 +7,11 @@
 // for OcLazyLoad refer http://blog.dareboost.com/en/2014/11/angularjs-lazyload-resources/
 // https://www.npmjs.com/package/oclazyload
 //http://hackedbychinese.github.io/ng-idle/
-var gtuApp = angular.module('gtuApp', ['ngRoute']);
+var gtuApp = angular.module('gtuApp', ['ngRoute','paginationModule','ngIdle']);
 gtuApp.config([
 				'$routeProvider',
-				function($routeProvider) {
+				'IdleProvider',
+				function($routeProvider,IdleProvider) {
 					$routeProvider
 							/*
 							 * .when('/dashboard', { templateUrl:
@@ -163,11 +164,11 @@ gtuApp.config([
 								redirectTo : '/error404'
 							});
 
-					//IdleProvider.idle(1800);//30 mins 1800
+					IdleProvider.idle(1800);//30 mins 1800
 					//Keep this time in sync with web.xml session timeout
 				} ]);
 
-/*gtuApp.run(function($rootScope, $templateCache, $location, Idle) {
+gtuApp.run(function($rootScope, $templateCache, $location, Idle) {
 	$rootScope.$on('$routeChangeStart', function(event, next, current) {
 		if (typeof (current) !== 'undefined') {
 			$templateCache.remove(current.templateUrl);
@@ -179,7 +180,7 @@ gtuApp.config([
 	});
 
 	Idle.watch();
-});*/
+});
 
 // gtuApp.run(function($rootScope) {
 // $rootScope.$on('$routeChangeSuccess', function() {

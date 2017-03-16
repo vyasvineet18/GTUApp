@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,5 +38,36 @@ public class CollegeRestController {
 		responseDTO.setData(collegeDTOLst);
 		return responseDTO;
 	}
+	
+	@RequestMapping(value="/all/page/{startlimit}/{endlimit}", method=RequestMethod.GET,produces="application/json")
+    @ResponseBody
+    public ResponseDTO getAllCollegeInPageRest(@PathVariable(value="startlimit") Integer startLimit,
+			@PathVariable(value="endlimit") Integer endLimit) {
+		
+		ResponseDTO responseDTO = new ResponseDTO();
+		List<CollegeDTO> collegeDTOLst = collegeService.fetchAllCollegeInPage(startLimit, endLimit);
+		responseDTO.setSuccess(GTUAppConstants.RESP_SUCCESS);
+		responseDTO.setMessage("");
+		responseDTO.setData(collegeDTOLst);
+		return responseDTO;
+    }
+	@RequestMapping(value="/all/count", method=RequestMethod.GET,produces="application/json")
+    @ResponseBody
+    public ResponseDTO getAllCollegeCountRest() {
+		
+		ResponseDTO responseDTO = new ResponseDTO();
+		responseDTO.setSuccess(GTUAppConstants.RESP_SUCCESS);
+		responseDTO.setMessage("");
+		responseDTO.setData(collegeService.getAllCollegeCount());
+		return responseDTO;
+    }
+	@RequestMapping(value="individual", method=RequestMethod.POST,consumes="application/json",produces="application/json")
+    @ResponseBody
+    public ResponseDTO updateOrCreateCollege(@RequestBody CollegeDTO collegeDTO) {
+		ResponseDTO responseDTO = new ResponseDTO();
+		return responseDTO;
+    }
+        
+
 	
 }

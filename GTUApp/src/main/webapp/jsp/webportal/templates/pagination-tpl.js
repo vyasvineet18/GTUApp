@@ -9,7 +9,7 @@ angular.module('paginationModule', []).
             return {
                 restrict: 'A',
                 replace: 'true',
-                templateUrl: '/app/jsp/webportal/templates/pagination-tpl.html',
+                templateUrl: '/gtuapp/jsp/webportal/templates/pagination-tpl.html',
                 scope: {
                     onNavigate: '&',
                     paginationObject: "="

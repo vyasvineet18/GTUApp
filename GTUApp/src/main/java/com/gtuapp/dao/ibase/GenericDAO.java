@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.hyginex.dao.ibase;
+package com.gtuapp.dao.ibase;
 
 import java.io.Serializable;
 import java.util.List;

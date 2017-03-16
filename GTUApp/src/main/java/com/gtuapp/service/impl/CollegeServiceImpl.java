@@ -39,4 +39,17 @@ public class CollegeServiceImpl implements CollegeService{
 		return collegeDTOLst;
 	}
 
+	@Override
+	public List<CollegeDTO> fetchAllCollegeInPage(int startLimit, int endLimit) {
+		// TODO Auto-generated method stub
+		List<CollegeDTO> collegeDTOList = collegeDAO.fetchAllCollegeInPage(startLimit, endLimit);
+		return collegeDTOList;
+	}
+
+	@Override
+	public Integer getAllCollegeCount() {
+		// TODO Auto-generated method stub
+		return collegeDAO.getAllCollegeCount();
+	}
+
 }

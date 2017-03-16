@@ -1,6 +1,6 @@
 <%@page import="com.hyginex.utilities.HyginexUtils"%>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
-<%@page import="com.hyginex.utilities.Hyginexconstants"%>
+<%@page import="com.g.utilities.Hyginexconstants"%>
 <%
     String link = request.getParameter("page");
     String customerid = request.getParameter("customerid");

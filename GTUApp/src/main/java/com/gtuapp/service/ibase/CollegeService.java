@@ -15,4 +15,6 @@ import com.gtuapp.entity.College;
 public interface CollegeService {
 	
 	public List<CollegeDTO> getAllColleges();
+	public List<CollegeDTO> fetchAllCollegeInPage(int startLimit,int endLimit);
+	public Integer getAllCollegeCount();
 }

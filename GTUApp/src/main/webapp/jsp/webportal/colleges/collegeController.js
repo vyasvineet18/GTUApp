@@ -5,9 +5,14 @@
  */
 gtuApp.controller('collegeController', function($scope, collegeService) {
     
+	$scope.paginationObject = {'start': 0, 'limit': 10, 'currentPage': 1, 'totalRecords': 0};
+	
+	$scope.getUpdate=function(){
+		console.log($scope.vinit);
+	}
 
     $scope.getAllCollegeData = function(callBack) {
-    	collegeService.getAllCollege()
+    	collegeService.getAllCollegeInPage($scope.paginationObject.start, $scope.paginationObject.limit)
                 .success(function(data) {
                     if (data.success && data.success === 1) {
                         $scope.collegeData = data.data;
@@ -21,11 +26,31 @@ gtuApp.controller('collegeController', function($scope, collegeService) {
             }
         });
     };
+    $scope.getAllCollegeDataCount = function(callBack) {
+    	collegeService.getAllCollegeCount()
+                .success(function(data) {
+                    $scope.paginationObject.totalRecords = data.data;
+                    $scope.isDataLoaded = true;
+                    if (callBack) {
+                        callBack();
+                    }
+                }).error(function() {
+            if (callBack) {
+                callBack();
+            }
+        });
+    };
 
     $scope.loadAll = function() {
         $scope.getAllCollegeData();
+        $scope.getAllCollegeDataCount();
     };
-
+    
+    $scope.fetchThroughPagination = function() {
+        //$scope.isDataLoaded = false;
+       // $scope.isDataLoaded = true;
+        $scope.getAllCollegeData();
+    };
     $scope.loadAll();
 
 });
@@ -38,10 +63,16 @@ gtuApp.service('collegeService', function($http) {
                 url: '/app/rest/user/customerid/' + customerid + '/fetchuser/' + start + '/' + limit
             });
         },*/
-        getAllCollege: function() {
+        getAllCollegeInPage: function(start, limit) {
             return $http({
                 method: 'GET',
-                url: '/gtuapp/rest/college/all/'
+                url: '/gtuapp/rest/college/all/page/'+start+'/'+limit
+            });
+        },
+        getAllCollegeCount: function() {
+            return $http({
+                method: 'GET',
+                url: '/gtuapp/rest/college/all/count'
             });
         },
         /*uploadUser: function(userid, first, last, email, phone, login, password, roleid, customerid, file) {
