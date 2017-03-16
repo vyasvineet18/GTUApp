@@ -1,0 +1,160 @@
+-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+--
+-- Host: localhost    Database: gtuapp
+-- ------------------------------------------------------
+-- Server version	5.7.13-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `colleges`
+--
+
+DROP TABLE IF EXISTS `colleges`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `colleges` (
+  `College_Id` int(4) NOT NULL,
+  `Name` varchar(200) NOT NULL,
+  `Address` varchar(200) NOT NULL,
+  `City` varchar(50) NOT NULL,
+  `Pincode` int(6) DEFAULT '0',
+  `Contact1` varchar(15) DEFAULT NULL,
+  `Contact2` varchar(15) DEFAULT NULL,
+  `Fax` varchar(15) DEFAULT NULL,
+  `Email1` varchar(150) DEFAULT NULL,
+  `Email2` varchar(150) DEFAULT NULL,
+  `Website` varchar(40) DEFAULT NULL,
+  `Latitude` decimal(9,6) DEFAULT NULL,
+  `Longitude` decimal(9,6) DEFAULT NULL,
+  `Is_Wifi` char(1) NOT NULL DEFAULT '0',
+  `Is_Hostel` char(1) NOT NULL DEFAULT '0',
+  `Is_Transportation` char(1) NOT NULL DEFAULT '0',
+  `Is_Canteen` char(1) NOT NULL DEFAULT '0',
+  `Fees` varchar(6) DEFAULT NULL,
+  `Type` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`College_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `colleges`
+--
+
+LOCK TABLES `colleges` WRITE;
+/*!40000 ALTER TABLE `colleges` DISABLE KEYS */;
+INSERT INTO `colleges` VALUES (1,'A. D. PATEL INSTITUTE OF TECHNOLOGY, KARAMSAD','Behind 4th Phase, GIDC, P.Box No-52','Anand',388121,'02692-233680',NULL,'02692-238180',NULL,NULL,'www.adit.ac.in',NULL,NULL,'','','','','99000',1),(2,'AHMEDABAD INSTITUTE OF TECHNOLOGY,  AHMEDABAD','Gota ognaj Highway','Ahmedabad',0,'02717-241133','02717-241132',NULL,NULL,NULL,'www.aitindia.in',NULL,NULL,'','','','','66000',1),(3,'ATMIYA INSTITUTE OF TECHNOLOGY & SCIENCE, RAJKOT','\"Yogidham Gurukul\",kalawad Road,','Rajkot',360005,'0281-2563445',NULL,'0281-2563766',NULL,NULL,'www.aits.edu.in',NULL,NULL,'','','','','76000',1),(4,'B. H. GARDI COLLEGE OF ENGINEERING & TECHNOLOGY, RAJKOT','Rajkot - Kalwad Road,Village:Anandpar,','Rajkot',360001,'02894-274471 ','02894-274477','02894-274470',NULL,NULL,'www.gardividyaptith.ac.in',NULL,NULL,'','','','','70000',1),(5,'BABARIA INSTITUTE OF TECHNOLOGY, VARNAMA','BITS edu Campus,Vadodara-Mumbai NH-8,Varnama','Vadodara',391240,'0265-2303991',NULL,'0265-2359999',NULL,NULL,'www.bitseducampus.org',NULL,NULL,'','','','','90000',1),(6,'BHAGWAN MAHAVIR COLLEGE OF ENGINEERING & TECHNOLOGY, SURAT','S.r.No 149, Near Ashirwad Villa,Bharthana-Vesu,B/h Heena,','Surat',0,'0261-6770142','0261-6770144','0261-2255299',NULL,NULL,'www.bmefcolleges.com',NULL,NULL,'','','','','68000',1),(7,'BIRLA VISHVAKARMA MAHAVIDYALAYA, VALLABH VIDYANAGAR','Ta & Dist:Anand','Anand',388120,'02692-230104',NULL,'02692-230762',NULL,NULL,'www.bvmengineering.ac.in',NULL,NULL,'','','','','1500',4),(8,'BIRLA VISHVAKARMA MAHAVIDYALAYA, VALLABH VIDYANAGAR','Vallabhvidyanagar','Anand',388120,'02692-230104',NULL,'02692-230762',NULL,NULL,'www.bvmengineering.ac.in',NULL,NULL,'','','','','100000',1),(9,'C. K. PITHAWALLA COLLEGE OF ENGINEERING & TECHNOLOGY, SURAT','Nr. Malvan Temple, Via. Magdalla Port, behind gaviyer village,dummas road , Ta:choryasi','Surat',395007,'0261-2728282',NULL,'0261-2723999',NULL,NULL,'www.ckpcet.ac.in',NULL,NULL,'','','','','74000',1),(10,'CHAROTAR INSTITUTE OF TECHNOLOGY, CHANGA','Charotar University of Science & Technology, Charusat Campus, At Post: Changa , Taluka:Petlad','Anand',388421,'02697-247500',NULL,'02697-247100',NULL,NULL,'www.charusat.ac.in',NULL,NULL,'','','','','105000',1),(11,'G. H. PATEL COLLEGE OF ENGINEERING & TECHNOLOGY, V V NAGAR','Bakrol Road,Vallabh Vidyanagar','Anand',388120,'02692-231651',NULL,'02692-236896',NULL,NULL,'www.gcet.ac.in',NULL,NULL,'','','','','111000',1),(12,'GANDHINAGAR INSTITUTE OF TECHNOLOGY, GANDHINAGAR','Khatraj  Kalol Road , Village : Moti Bhoyan ,Kalol','Gandhinagar',382721,'02764-281860','02764-281861','02764-281862',NULL,NULL,'www.git.org.in',NULL,NULL,'','','','','58000',1),(13,'GOVERNMENT ENGINEERING COLLEGE, SECTOR - 28, GANDHINAGAR','Secotr-28 Near Pasu Jaivik Sanstha','Gandhinagar',382028,'079-23215965',NULL,NULL,NULL,NULL,'www.gecg28.ac.in',NULL,NULL,'','','','','1500',2),(14,'GOVERNMENT ENGINEERING COLLEGE, BHARUCH','Opp.Bholav Guest House,Village Kasak,','Bharuch ',392002,'02642-227054','02642-226381','02642-227054',NULL,NULL,'www.gecbharuch.com',NULL,NULL,'','','','','1500',2),(15,'GOVERNMENT ENGINEERING COLLEGE, BHUJ','New Ravalwadi Relocation site,Near Umanagar,Mirzapar Road,','Bhuj',370001,'02832-231164',NULL,'02832-231169',NULL,NULL,'www.gecbhuj.gujarat.gov.in',NULL,NULL,'','','','','1500',2),(16,'GOVERNMENT ENGINEERING COLLEGE, MODASA','Shmalaji Road','Modasa',383315,'02774-242634',NULL,'02774-242633',NULL,NULL,'www.gecmodasa.ac.in',NULL,NULL,'','','','','1500',4),(17,'VISHWAKARMA GOVERNMENT ENGINEERING','Nr. Visat Petrol Pump,Sabarmati-gandhinagar Highway,','Chandkheda',382424,'079-23293866',NULL,'079-23293866',NULL,NULL,'www.vgecg.ac.in',NULL,NULL,'','','','','1500',2),(18,'GOVERNMENT ENGINEERING COLLEGE, DAHOD','Jalod Road, ','Dahod',389151,'02673-263780',NULL,'02673-263780',NULL,NULL,'www.gecdahod.ac.in',NULL,NULL,'','','','','1500',2),(19,'GOVERNMENT ENGINEERING COLLEGE, VALSAD','Near B K M Sicence College,Tithal Road,','Valsad',396001,'02632-241960',NULL,'02632-241960',NULL,NULL,'www.gecvaisad.org',NULL,NULL,'','','','','1500',2),(20,'GOVERNMENT ENGINEERING COLLEGE, RAJKOT','Mavdi-Kankot Road, Near Hanuman Mandir,Near Krishna Nagar,','Kankot',360005,'0281-2924062',NULL,NULL,NULL,NULL,'www.gecrajkot.ac.in',NULL,NULL,'','','','','1500',2),(21,'GOVERNMENT ENGINEERING COLLEGE, BHAVNAGAR','Near BPTI, Vidyanagar','Bhavnagar',364002,'0278-2525354',NULL,'0278-2525354',NULL,NULL,'www.gecbvn.ac.in',NULL,NULL,'','','','','1500',2),(22,'GOVERNMENT ENGINEERING COLLEGE,AT. KATPUR, PATAN','At & Post-Katpur','Patan',384265,'02766-291561',NULL,NULL,NULL,NULL,'www.gecpatan.org',NULL,NULL,'','','','','1500',4),(23,'GOVERNMENT ENGINEERING COLLEGE, SURAT','Ring Road, Majura Gate,','Surat',395001,'0261-2653139',NULL,'0261-2653139',NULL,NULL,'www.gecsurat.com',NULL,NULL,'','','','','1500',2),(24,'HASMUKH GOSWAMI COLLEGE OF ENGINEERING, VAHELAL','At Post: Vahelal,Naroda-Dehgam Road,Ahmedabad','Ahmedabad',382330,'02718-247215',NULL,'02718-247131',NULL,NULL,'www.hgce.org',NULL,NULL,'','','','','57000',1),(25,'INDUS INSTITUTE OF TECHNOLOGY & ENGINEERING, AHMEDABAD','Ranchara Via Thaltej','Ahmedabad',382115,'02764-260277','02764-260278','02764-260279',NULL,NULL,'www.indusuni.ac.in',NULL,NULL,'','','','','77000',1),(26,'KALOL INSTITUTE OF TECHNOLOGY & RESEARCH CENTRE, KALOL','Ahemadabad Mehsana Highway ,B/H Old Janpath Hotel ','Kalol',382721,'02764-222603',NULL,'02764-222605',NULL,NULL,'www.kirc.ac.in',NULL,NULL,'','','','','63000',1),(27,'KANKESHWARIDEVI INSTITUTE OF TECHNOLOGY, JAMNAGAR','Near Naranpar Forest Nursery,Opp. Ranjitsagar Dam,Jamnagar-Samana Road','Jamnagar',361010,'0288-2888080',NULL,'0288-2888081',NULL,NULL,'www.kit.org.in',NULL,NULL,'','','','','69000',1),(28,'L. D. COLLEGE OF ENGINEERING, AHMEDABAD','Opposite Gujarat University,Navarangpura','Ahmedabad',380015,'079-26306752',NULL,'079-26304118',NULL,NULL,'www.ldceahd.org',NULL,NULL,'','','','','1500',2),(29,'LALJIBHAI CHATURBHAI INSTITUTE OF TECHNOLOGY, BHANDU','Mehsana-Unjha Highway,At & Po: Bhandu,Ta: Visnagar','Mehsana -',384120,'02765-287145',NULL,'02765-287945',NULL,NULL,'www.lcit.org',NULL,NULL,'','','','','72000',1),(30,'LEELABEN DASHRATHBHAI RAMDAS PATEL INSTITUTE OF TECHNOLOGY & RESEARCH, GANDHINAGAR','Sector 15,Near KH -5','Gandhinagar',382015,'079-23241492','079-23241494','079-23241495',NULL,NULL,'www.ldrp.ac.in',NULL,NULL,'','','','','82000',1),(31,'LUKHDHIRJI ENGINEERING COLLEGE','Sama Kanthe, ','Dist-Morbi',363642,'02822-240743',NULL,'02822-240645',NULL,NULL,'www.lecollege.org',NULL,NULL,'','','','','1500',2),(32,'L. J. INSTITUTE OF ENGINEERING AND TECHNOLOGY, AHMEDABAD','Sarkhej Highway','Ahmedabad',382210,'079-26890383',NULL,'079-26890383',NULL,NULL,'www.ljinstitutes.org',NULL,NULL,'','','','','68000',1),(33,'MAHATMA GANDHI INSTITUTE OF TECHNICAL EDUCATION & RESEARCH CENTRE, NAVSARI','NPE Campus,Bhaanunagar,Eru- Aat Road,Po: Bhutsad,Ta: Jalalpore','Navsari, ',396450,'02637-656313','02637-656212','02637-228272',NULL,NULL,'www.npvgiter.org',NULL,NULL,'','','','','57000',1),(34,'NARNARAYAN SHASTRI INSTITUTE OF TECHNOLOGY, JETALPUR','C/O Swaminarayan Gurukul,Jetalpur','Ahmedabad',382426,'9825833001',NULL,NULL,NULL,NULL,'www.nsitgurukul.com',NULL,NULL,'','','','','63000',1),(35,'NOBLE GROUP OF INSTITUTIONS, JUNAGADH','Junagadh-Bhesan Road,Via Vadal','Junagadh',362310,'0285-2680244',NULL,'0285-2680255',NULL,NULL,'www.necvbt.org',NULL,NULL,'','','','','54000',1),(36,'Sanjaybhai Rajguru College of Engineering','Sanjay Raj Education Zone,At. Bedi Hadmatiya,Morvi Road,Right hand side turn from Bedi,','Rajkot',NULL,'0281-2786500','9723432014','0281-2786260',NULL,NULL,'www.srez.edu.in',NULL,NULL,'','','','','67000',1),(37,'PARUL INSTITUTE OF ENGINEERING & TECHNOLOGY, WAGHODIA','Waghodia,','Vadodara',391760,'02668-260202','02668-260312','02668-260201',NULL,NULL,'www.paruluniversity.ac.in',NULL,NULL,'','','','','70000',1),(38,'R. K. COLLEGE OF ENGINEERING AND TECHNOLOGY, RAJKOT','R.K. University Campus,Rajkot-Bhavnagar Highway,Kasturbadham,','Rajkot',360020,'0281-2785128','9909952030','0281-2785128',NULL,NULL,'www.rku.ac.in',NULL,NULL,'','','','','83000',1),(39,'S. P. B. PATEL ENGINEERING COLLEGE, MEHSANA','Linch,Nr. Saffrony Holiday Resort,Ahmedabad-Mehsana Highway,','Mahesana',384435,'02762-285721',NULL,'02762-285720',NULL,NULL,'www.saffrony.ac.in',NULL,NULL,'','','','','69000',1),(40,'SANKALCHAND PATEL COLLEGE OF ENGINEERING, VISNAGAR','S.K. Campus,Gandhinagar-Ambaji State Highway Link Road,Kamana Char Rasta,Visnagar','Mehsana',384315,'02765-232008',NULL,'02765-224982',NULL,NULL,'www.spcevng.ac.in ',NULL,NULL,'','','','','60000',1),(41,'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY, VASAD','Behind S.T.Depot','Vasad',388306,'02692-274489',NULL,'02692-274540',NULL,NULL,'www.svitvasad.ac.in',NULL,NULL,'','','','','69000',1),(42,'SARVAJANIK COLLEGE OF ENGINEERING & TECHNOLOGY, SURAT','Dr. R.K.Desai Marg,Opp. Mission Hospital,Athwalines,','Surat',395001,'0261-2240147','0261-2240148','0261-2240145',NULL,NULL,'www.scet.ac.in ',NULL,NULL,'','','','','90000',1),(43,'SHANTILAL SHAH ENGINEERING COLLEGE','Sidsar Campus, P.O vartej','Bhavnagar',364060,'0278-2445509','0278-2445767','0278-2445509',NULL,NULL,'www.ssgec.ac.in',NULL,NULL,'','','','','1500',2),(44,'C. U. SHAH COLLEGE OF ENGINEERING & TECHNOLOGY, WADHWAN','Ahmedabad - Surendranagar State Highway,nr. Kothariya village','Surendranagar',363030,'02752-294004',NULL,'02752-247712',NULL,NULL,'www.ccetvbt.org',NULL,NULL,'','','','','70000',1),(45,'SHRI SADVIDYAMANDAL INSTITUTE OF TECHNOLOGY,BHARUCH','College Campus,Old National Highway NH-8,','Bharuch',392001,'02642-245864',NULL,'02642-249601',NULL,NULL,'www.svmit.ac.in  ',NULL,NULL,'','','','','56000',1),(46,'UNIVERSAL COLLEGE OF ENGINEERING & TECHNOLOGY, AHMEDABAD','At & Po: Motibhoyan,Gota-vadsar-kalol Road,Ta: Kalol,','Gandhinagar',382721,'02764-281053','9925003933','02764-281054',NULL,NULL,'www.ucet.in',NULL,NULL,'','','','','46000',1),(47,'VYAVASAYI VIDYA PRATISHTHAN\'S SANCH. COLLEGE OF ENGINEERING, RAJKOT','Opp. Motel The Village,Kalawad Road,Vajdi-Virda','Rajkot',360005,'0281-2783394',NULL,'0281-2783487',NULL,NULL,'www.vvpedulink.ac.in',NULL,NULL,'','','','','77000',1),(48,'VALIA INSTITUTE OF TECHNOLOGY,VALIA, BHARUCH','Valia Netrang Road,Valia','Bharuch',393135,'02643-270700',NULL,'02643-270390',NULL,NULL,'www.vitvalia.ac.in',NULL,NULL,'','','','','49000',1),(49,'SHRI SITARAMBHAI NARANJI PATEL INSTITUTE OF TECHNOLOGY & RESEARCH CENTER','Vidyabharri Campus,At & Po: Umrakh,Bardoli-Mota Road,Umrakh','Surat',394345,'02622-224581','9712177799','02622-227481',NULL,NULL,'www.snpitrc.ac.in',NULL,NULL,'','','','','61000',1),(50,'SIGMA INSTITUTE OF ENGINEERING, VADODARA','At: Barkrol,Ajwa-Nimeta Road,Ta: Waghodia,','Vadodara',390019,'02668-267000','9909976831',NULL,NULL,NULL,'www.sigma.ac.in',NULL,NULL,'','','','','56000',1),(51,'ALPHA COLLEGE OF ENGINEERING & TECHNOLOGY, KHATRAJ, KALOL','B/S Lincoln Polymers Via:Vadsar,Village: Khatraj,Taluka:Kalol','Gandhinagar',382721,'02764-281031','02764-281032','02764-281031',NULL,NULL,'www.alpha-cet.in',NULL,NULL,'','','','','59000',1),(52,'CENTRAL INSTITUTE OF PLASTICS ENGINEERING & TECHNOLOGY, VATVA, AHMEDABAD','Plot No. 630 Phase - Iv, GIDC , Vatva ','Ahmedabad',382445,'079-25834402',NULL,'079-40083906',NULL,NULL,'www.cipet.gov.in',NULL,NULL,'','','','','57000',1),(53,'CHHOTUBHAI GOPALBHAI PATEL INSTITUTE OF TECHNOLOGY, TARSADI, BARDOLI','Maliba Campus,Gopal Vidyanagar, Bardoli-Mahuva Road,','Bardoli',394350,'02625-292339',NULL,'02626-255882',NULL,NULL,'www.cgpit-bardoli.edu.in',NULL,NULL,'','','','','74000',1),(54,'DARSHAN INSTITUTE OF ENGINEERING & TECHNOLOGY, RAJKOT-MORBI HIGHWAY, HADALA','At: Hadala, Nr. Water Sump,Rajkot-Morbi Highway','Rajkot',363650,'02822-293010',NULL,'02822-293008',NULL,NULL,'www.darshan.ac.in',NULL,NULL,'','','','','68000',1),(55,'ENGINEERING COLLEGE, TUWA, GODHARA','At & Po: Tuwa,Ta: Godhara','Panchmahal',389713,'02672-286758',NULL,'02672-286757',NULL,NULL,'www.engtuwa,com',NULL,NULL,'','','','','59000',1),(56,'FACULTY OF ENGINEERING, GROW MORE FOUNDATION GROUP OF INSTITUTIONS,BERNA, HIMMATNAGAR','Ahmedabad - Udaipur Nh - 08,Himmatnagar','Sabarkantha',383001,'02772-225500',NULL,'02772-225505',NULL,NULL,'www.growmore.ac.in',NULL,NULL,'','','','','65000',1),(57,'MARWADI EDUCATION FOUNDATION\'S GROUP OF INSTITUTIONS,RAJKOT','At Village: Gauridad,Morbi Road ','Rajkot',360003,'0281-2923112',NULL,'0281-2924154',NULL,NULL,'www.marwadieducation.edu.in',NULL,NULL,'','','','','96000',1),(58,'FACULTY OF ENGINEERING, SHREE SARASWATI EDU. SANSTHAN GROUP OF INSTITUTIONS,RAJPUR, KADI','At & Po: Rajpur,Rajpur Untva Road,Ta: Kadi,','Mehsana',382740,'02764-278813',NULL,'02764-278814',NULL,NULL,'www.scet.edu.in',NULL,NULL,'','','','','50000',1),(59,'G. K. BHARAD INSTITUTE OF ENGINEERING, KASTURBA DHAM, RAJKOT','C/o Bharad Vishvvidhyapith,Rajkot-Bhavnagar National Highway,Kasturba Dham,Tramba','Rajkot',360001,'0281-2785159',NULL,NULL,NULL,NULL,'www.gkbharad.org',NULL,NULL,'','','','','63000',1),(60,'GOVERNMENT ENGINEERING COLLEGE, GODHARA','Village - Nasirpur, Po-Govindi,Godhara-Lunavada Road,','Godhara',389001,NULL,NULL,NULL,NULL,NULL,'www.gecgodhra.ac.in',NULL,NULL,'','','','','1500',2),(61,'GOVERNMENT ENGINEERING COLLEGE, PALANPUR','Ahmedabad-Palanpur Highway,At:Jagana,Ta:Palanpur','Banaskatha',0,'02742-220005',NULL,NULL,NULL,NULL,'www.gecpalanpur.edu.in',NULL,NULL,'','','','','1500',2),(62,'GUJARAT INSTITUTE OF TECHNICAL STUDIES, MOYAD, PRANTIJ','Way From Vajapur Village,Ahmedabad-Himmatnagar National Highway No. 8,Near Asian Granito Ltd. At Moyad,Ta: Prantij','Sabarkantha',383120,'02770-240676',NULL,'02770-240675',NULL,NULL,'www.gits-gujarat.ac.in',NULL,NULL,'','','','','52000',1),(63,'MADHUBEN AND BHANUBHAI PATEL WOMEN INSTITUTE OF ENGINEERING FOR STUDIES AND RESEARCH IN COMPUTER AND COMMUNICATION TECHNOLOGY','P.O. Box No 8,Beyond GIDC Phase IV,Vithal Udyog Nagar','Anand',388121,'02692-230880','02692-230824','02692-230823',NULL,NULL,'www.mbict.ac.in',NULL,NULL,'','','','','71000',1),(64,'K. J. INSTITUTE OF ENGINEERING AND TECHNOLOGY, SAVALI','K.J. ,Opp. ITI, Javla-Savali,PO: Savali Ta: Savali','Vadodara',391770,'02667-222264','8980314190','02667-222264',NULL,NULL,'www.kjit.org',NULL,NULL,'','','','','57000',1),(65,'MERCHANT ENGINEERING COLLEGE, BASNA, VISNAGAR','Basna Campus,Mehsana-Visnagar Highway,At & To: Basna,Ta:Visnagar ','Mehsana',384315,'02762-275097',NULL,'02762-275066',NULL,NULL,'www.mecbasna.ac.in',NULL,NULL,'','','','','58000',1),(66,'SABAR INSTITUTE OF TECHNOLOGY FOR GIRLS, TAJPUR, SABARKANTHA','At & Po Tajpur,Ahmedabad-Himmatnagar Highway,NH-8,Near Gandhinagar,Ta: Prantij','Sabarkantha',383205,'02770-255132',NULL,'02770-255131',NULL,NULL,'www.sabareducation.org',NULL,NULL,'','','','','58000',1),(67,'SAL INSTITUTE OF TECHNOLOGY & ENGINEERING RESEARCH, AHMEDABAD','Opp. Science City,Sola Road','Ahmedabad',380060,'079-65229333','079-65229334','079-29700310',NULL,NULL,'www.sal.edu.in',NULL,NULL,'','','','','56000',1),(68,'SARDAR PATEL INSTITUTE OF TECHNOLOGY, PILUDARA, MEHSANA','Merchant Education Campus,Mehsan Visnagar Highway,At: Piludara,Ta: Mehsana','Mehsana',384380,'02762-275101',NULL,'02762-275110',NULL,NULL,'www.spitcp.ac.in',NULL,NULL,'','','','','55000',1),(75,'SHANKERSINH VAGHELA BAPU INSTITUTE OF TECHNOLOGY, UNAVA, GANDHINAGAR','Gandhinagar-Mansa Road,Po: Vasan','Gandhinagar',382650,'079-23976170',NULL,'079-23976172',NULL,NULL,'www.bapugkv.ac.in',NULL,NULL,'','','','','72000',1),(76,'SHRI SWAMI ATMANAND SARASWATI INSTITUTE OF TECHNOLOGY, SURAT','Shri Swami Atmanand Saraswati Vidhya Sankul,Kapodara,Varachha Road,','Surat',395006,'0261-2573553','0261-2573554','0261-2573552',NULL,NULL,'www.ssasit.org',NULL,NULL,'','','','','60000',1),(77,'SILVER OAK COLLEGE OF ENGINEERING & TECHNOLOGY, AHMEDABAD','352, 353A, Nr. Bhavik Publication, \\Opp. Bhagwat Vidyapith,Gota Cross Road,','Ahmedabad',382481,'079-66046304',NULL,'079-66046399',NULL,NULL,'www.socet.edu.in',NULL,NULL,'','','','','73000',1),(78,'SMT. S. R. PATEL ENGINEERING COLLEGE','Dabbhi-Unjha,At & Po: Dabhi,Ta: Unjha,','Mehsana',384170,'02767-272009',NULL,'02767-272617',NULL,NULL,'www.srpec.org.in',NULL,NULL,'','','','','72000',1),(79,'TAKSHASHILA COLLEGE OF ENGINEERING & TECHNOLOGY, ISHWARIYA, RAJKOT','Kalawad Road,Near Balaji Vefar,Opp. Hill View club,150 Ft Ishwariya Road,','Rajkot',360110,'0281-3205751',NULL,NULL,NULL,NULL,'www.takshashilacollege.com',NULL,NULL,'','','','','70000',1),(80,'VADODARA INSTITUTE OF ENGINEERING, KOTAMBI, WAGHODIYA','Vadodara- Halol Toll Road,At Kotambi','Vadodar',391510,'0265-3915900',NULL,'0265-3915905',NULL,NULL,'www.vier.org.in',NULL,NULL,'','','','','52000',1),(81,'VENUS INTERNATIONAL COLLEGE OF TECHNOLOGY, BHOYAN RATHOD, GANDHINAGAR','Adalaj Kalol Highway Road,Opp. IFFCO,Village:Bhoyan Rathod,Ta: Gandhinagar','Gandhinagar',382420,'079-29289580','079-29289779','079-40021021',NULL,NULL,'www.venusict.org',NULL,NULL,'','','','','66000',1),(82,'DR. JIVRAJ MEHTA INSTITUTE OF TECHNOLOGY, MOGAR, ANAND','DJMIT College Campus, NH-8, village:mogar','Anand',388340,'02692-280028','02692-250038','02692-280048',NULL,NULL,'www.djmit.ac.in',NULL,NULL,'','','','','65000',1),(83,'DR. SUBHASH P. CHAVDA AHIR KELVANI MANDAL\'S GROUP OF INSTITUTIONS, JUNAGADH','kelvani Mandal\'s Group of Institutions,Khamdhrol Road','Junagadh',362001,'0285-2610055',NULL,NULL,NULL,NULL,'www.drsubhashtech.edu.in',NULL,NULL,'','','','','65000',1),(84,'FACULTY OF ENGINEERING ,TECHNOLOGY AND RESEARCH. BARDOLI, SURAT','At. Isroli,PO: Afwa,Bardoli_Navsari Road,Ta:Bardoli,','Surat',394620,'02622-290933',NULL,'02622-291411',NULL,NULL,'www.fetr.ac.in',NULL,NULL,'','','','','56000',1),(85,'HJD INSTITUTE OF TECHNICAL EDUCATION AND RESEARCH, KERA','Kera-Mundra Road,Gajod,At kera,Tal. Bhuj','kutch',370430,'02832-281085','02832-281086','02832-281004',NULL,NULL,'www.hjdinstitute.org',NULL,NULL,'','','','','56000',1),(86,'LAXMI INSTITUTE OF TECHNOLOGY, SARIGAM','P.BOX No - 15,P.O. Sarigam,Tal. Bhilad','Valsad',396155,'0260-2405378','0260-2405350','0260-2405308',NULL,NULL,'www.lit.ac.in',NULL,NULL,'','','','','67000',1),(87,'PARUL INSTITUTE OF TECHNOLOGY, LIMDA','Waghodia,','Vadodara',391760,'02668-260202','02668-260312','02668-260201',NULL,NULL,'www.paruluniversity.ac.in',NULL,NULL,'','','','','70000',1),(88,'SAMARTH COLLEGE OF ENGINEERING AND TECHNOLOGY, HIMMATNAGAR','Samarth Campus, Opp. Sabar Dairy,NH-8,Hajipur,Himmatnagar','Sabarkantha',383031,'8758285845','7574862415',NULL,NULL,NULL,'www.samarthcampus.com',NULL,NULL,'','','','','52000',1),(89,'SHRI LABHUBHAI TRIVEDI INSTITUTE OF ENGINEERING & TECHNOLOGY, RAJKOT','At Village Mavdi, Nr. Govt. Engg. College,Kalawad Road,','Rajkot',360005,'0281-6564011',NULL,'0281-2466150',NULL,NULL,'www.ltiet.com',NULL,NULL,'','','','','57000',1),(90,'TATVA INSTITUTE OF TECHNOLOGICAL STUDIES, MODASA','Nr. Karna Petrol Pump,Modasa -Shamlaji Road,Modasa,','Aravalli',383315,'02774-242801','02774-242802','02774-242805',NULL,NULL,'www.tatvafoundation.com',NULL,NULL,'','','','','51000',1),(91,'SHRI SATSANGI SAKETDHAM \"RAM ASHRAM\" GROUP OF INSTITUTIONS.','At & Po Village Vadasma,Ta : Mehsana','Mehsana',382708,'02762-278305','9099063321','02762-278018',NULL,NULL,'www.sricampus.org',NULL,NULL,'','','','','60000',1),(92,'VEERAYATAN GROUP OF INSTITUTIONS-FACULTY OF ENGINEERING & FACULTY OF MANAGEMENT','Haripar, Mota Asambia-bhuj-mandvi road , Mandvi','kutch',370460,'02834-275483','02834-275241',NULL,NULL,NULL,'www.veereng.org',NULL,NULL,'','','','','57000',1),(93,'ARRDEKTA INSTITUTE OF TECHNOLOGY, RADHIWAD, KHEDBRAHMA','Ahmedabad- Ambaji state highway no-9 ,opp. Ekta institute, at radhiwad,Po-Navi Metral Ta-Khedbrahma','Sabarkantha',NULL,'02775-291580',NULL,'02775-223401',NULL,NULL,'www.aeedekta.org.in',NULL,NULL,'','','','','56000',1),(94,'VIDHYADEEP INSTITUTE OF MANAGEMENT & TECHNOLOGY, ANITA (KIM)','At & Po. Anita(kim),Ta:Olpad','Surat',0,'02621-249227','7567489888',NULL,NULL,NULL,'www.vimat.org',NULL,NULL,'','','','','72000',1),(95,'INSTITUTE OF TECHNOLOGY & MANAGEMENT, UNIVERSE TECHNICAL CAMPUS,VADODARA','UNIVERSE TECHNICAL CAMPUS,At: Dhanora Tank Road,Village: Paldi,Vadodara-Halol Highway,Tal: Waghodia','Vadodara ',0,'02668-275508',NULL,NULL,NULL,NULL,'www.itmuniverse.ac.in',NULL,NULL,'','','','','91000',1),(96,'ARUN MUCHHALA ENGINEERING COLLEGE, DHARI, DIST: AMRELI','Sarasiya road , opp. Khokhra mahadev , dhari ','Amareli',365640,'02797-295370',NULL,'02797-221001',NULL,NULL,'NULL',NULL,NULL,'','','','','69000',1),(97,'MARWADI EDUCATION FOUNDATION\'S GROUP OF INSTITUTIONS-FACULTY OF TECHNOLOGY, RAJKOT','At Village: Gauridad,Morbi Road ','Rajkot',360003,'0281-2923112',NULL,'0281-2924154',NULL,NULL,'www.marwadieducation.edu.in',NULL,NULL,'','','','','96000',1),(98,'HANSABA COLLEGE OF ENGINEERING & TECHNOLOGY, SIDHPUR,PATAN','Sujanpur Patia,Opp. IOC Depot,State Highway 41,Sidhpur','Patan',384151,'02767-224855','9099054856','02767-227755',NULL,NULL,'www.hcet.gtc.ac.in',NULL,NULL,'','','','','69000',1),(99,'SHROFF S R ROTARY INSTITUTE OF CHEMICAL TECHNOLOGY, AT & PO: VATARIA, BHARUCH','Block No:402 , At & Po:Vataria ,Ankleshwar-Valia Road,Ta: Valia','Bharuch',0,'02643-290825','9712177799','02643-270323',NULL,NULL,'www.srict.in',NULL,NULL,'','','','','83000',1),(100,'LEADS INSTITUTE OF TECHNOLOGY & ENGINEERING, AT: MATAR. BHARUCH','At & Po : Matar,Ta: Amod,','Bharuch',393110,'02641-290110','02641-290111',NULL,NULL,NULL,'www.leads-india.org',NULL,NULL,'','','','','65000',1),(101,'IPCOWALA INSTITUTE OF ENGINEERING & TECHNOLOGY, DHARMAJ, ANAND','Dharmaj,Ta: Patlad','Anand',0,'02697-245141',NULL,'02697-245808',NULL,NULL,'www.iietedu.org',NULL,NULL,'','','','','51000',1),(102,'OM ENGINEERING COLLEGE, AT CHOKLI, DIST JUNAGADH','junagadh-Bheshan Road, At Chokli','Junagadh',362310,'8980054444','8980064444','0285-2680666',NULL,NULL,'www.omeducation.edu.in',NULL,NULL,'','','','','63000',1),(103,'OM INSTITUTE OF TECHNOLOGY, AT VANTAVACHHODA, PO:SHAHERA DIST PANCHMAHAL','At Vantavachhoda,Po: Shahera','Panchmahal',0,'02670-296016',NULL,NULL,NULL,NULL,'www.ominstitute.org',NULL,NULL,'','','','','41000',1),(104,'GUJARAT POWER ENGINEERING AND RESEARCH INSTITUTE (GPERI), MEVAD, DIST. MEHSANA','Nr.Toll Booth,Ahmedabad-Mehsana Express way,Village-Mewad,','Mehsana',382710,'02762-285871',NULL,NULL,NULL,NULL,'www.gperi.ac.in',NULL,NULL,'','','','','80000',3),(107,'SHRI J.M. SABVA INSTITUTE OF ENGINEERING & TECHNOLOGY-BOTAD,DIST. BHAVNAGAR','Aradhana Shaikshanik Sankul,Bhavnagar Road,Botad','Bhavnagar',364710,'02849-294550','02849-294551','Null',NULL,NULL,'www.jmsetbotad.com',NULL,NULL,'','','','','43000',1),(108,'AMIRAJ COLLEGE OF ENGINEERING & TECHNOLOGY','At Village Khoraj, Nr. At Village Khoraj,Tata-Neno plant, Sarkhej-Viramgam Highway,Ta:Sanand ','Ahmedabad',0,'9228002526','9099004714',NULL,NULL,NULL,'www.amirajcollege.in',NULL,NULL,'','','','','71000',1),(109,'BALAJI ENGINEERING COLLEGE','At: Makhiyala, Jaunaghad- Dhoraji highway ','Junagadh',0,'0285-2687237','0285-2687238',NULL,NULL,NULL,'www.bietjunagadh.org',NULL,NULL,'','','','','67000',1),(110,'GIDC DEGREE ENGINEERING COLLEGE, NAVSARI','Block No:997, At Village','Abrama Ta:Jalapore, Dist: Navsari',396406,'02637-229040',NULL,NULL,NULL,NULL,'www.gdec.in',NULL,NULL,'','','','','64000',3),(111,'MAHAVIR SWAMI COLLEGE OF ENGINEERING & TECHNOLOGY','Survey No.149,New City Light Road,Nr Ashirwad Villa,Bharthana-Vesu','Surat',395017,'0261-6770155',NULL,NULL,NULL,NULL,'www.bmefcolleges.edu.in',NULL,NULL,'','','','','69000',1),(112,'PACIFIC SCHOOL OF ENGINEERING','Plot No. 87,91,92,96 Opp. Sarthee Township,Kadodara Palasana Highway(NH-8),At sanki,Ta: Palasana','Surat',394305,'02622-291552',NULL,NULL,NULL,NULL,'NULL',NULL,NULL,'','','','','72000',1),(113,'SAL COLLEGE OF ENGINEERING','Opp. Science City,Sola Road','Ahmedabad',380060,'079-65229333','079-65229334','079-29700310',NULL,NULL,'www.sal.edu.in',NULL,NULL,'','','','','69000',1),(114,'SHREE PANDIT NATHULALJI VYAS TECHNICAL CAMPUS','Surendranagar - Ahmedabad State Highway, Near Kothariya Village, Wadhwan, ','Surendranagar',0,'02752-247333','02752-247444',NULL,NULL,NULL,'www.spnvcollege.co.in',NULL,NULL,'','','','','69000',1),(115,'SWAMINARAYAN COLLEGE OF ENGINEERING & TECHNOLOGY','Opp. Kalol GIDC,Mehsana Highway,Saij,','Gandhinagar',0,'02764-223805',NULL,NULL,NULL,NULL,'www.ssvgkalol.com',NULL,NULL,'','','','','52000',1),(116,'MARWADI EDUCATION FOUNDATION - FACULTY OF PG STUDIES & RES. IN ENGG. & TECH., RAJKOT','At Village: Gauridad,Morbi Road ','Rajkot',360003,'0281-2923112',NULL,'0281-2924154',NULL,NULL,'www.marwadieducation.edu.in',NULL,NULL,'','','','','96000',1),(117,'NEOTECH INSTITUTE OF TECHNOLOGY','At & Po: Virod,Ta: Vadodara','Vadodara',390022,'0265-2358991','9913365000',NULL,NULL,NULL,'www.neotech.ac.in',NULL,NULL,'','','','','63000',1),(118,'D.A. DEGREE ENGGINEERING & TECHNOLOGY','Hiraba kelawani trust education campus, Nr. Khatraj Chokadi, Mahemdabad','Kheda',387130,'02694-244364',NULL,NULL,NULL,NULL,'www.dadet.in',NULL,NULL,'','','','','56000',1),(120,'ADITYA SILVER OAK INSTITUTE OF TECHNOLOGY, AHMEDABAD','Opp. Bhagvat Vidyapith Nr.Gota Cross Road,S.G. Highway','Ahmedabad',382481,'079-66046304',NULL,'079-66046399',NULL,NULL,'www.asoit.edu.in',NULL,NULL,'','','','','56000',1),(121,'APOLLO INSTITUTE OF ENGINEERING & TECHNOLOGY, AHMEDABAD','SNME Campus,At : Anasan, Naroda Dehgam Road,Nr S.P. Ring Road,','Ahmedabad',382330,'02718-240233','02718-240236',NULL,NULL,NULL,'www.aiet.edu.in',NULL,NULL,'','','','','54000',1),(122,'AARYA-VEER COLLEGE OF ENGINEERING & TECHNOLOGY, RAJKOT','AT POST:KUVADVA,KUVADVA-SARDHAR ROAD,Kuvadva','RAJKOT',360003,'7575808506','7575808536',NULL,NULL,NULL,'www.aaryaveercampus.edu.in',NULL,NULL,'','','','','53000',1),(123,'S.S.AGRAWAL INSTITUTE OF ENGINEERING & TECHNOLOGY, NAVSARI','S.S. Agrawal College Campus,Veeranjali Marg, Near Devina Park Society,Gandevi Road,','Navasari',396445,'02637-232667','9537278987','02637-232857',NULL,NULL,'www.agarwaleducation.net',NULL,NULL,'','','','','56000',1),(124,'SARDAR PATEL COLLEGE OF ENGINEERING, BAKROL ANAND','Sardar Patel Education Campus,Vidhyanagar-Vadtal Road,Bakrol','Anand',388315,'02692-235300','02692-235326',NULL,NULL,NULL,'www.spec.edu.in',NULL,NULL,'','','','','53000',1),(125,'SHREE SWAMINARAYAN INSTITUTE OF TECHNOLOGY, BHAT, GANDHINAGAR','Nr. EDI ,Bhat Circle , Near S.P. ring road,  Bhat, Ahmedabad airport- Gandhinagar Highway,','Gandhinagar',382428,'079-23969410','7043609281',NULL,NULL,NULL,'www.ssit.co.in',NULL,NULL,'','','','','54000',1),(126,'SAL ENGINEERING &TECHNICAL INSTITUTE, SOLA, AHMEDABAD','Opp. Science City,Sola Road','Ahmedabad',380060,'079-29700310','9925195966',NULL,NULL,NULL,'www.sal.edu.in',NULL,NULL,'','','','','54000',1);
+/*!40000 ALTER TABLE `colleges` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `Role_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Is_Active` char(1) DEFAULT NULL,
+  PRIMARY KEY (`Role_Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'Admin','Y'),(2,'User','Y');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_role`
+--
+
+DROP TABLE IF EXISTS `user_role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_role` (
+  `User_Role_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `User_Id` int(11) NOT NULL,
+  `Role_Id` int(11) NOT NULL,
+  PRIMARY KEY (`User_Role_Id`),
+  KEY `FK_USER_ROLE_idx` (`User_Id`),
+  KEY `FK_USER_ROLE_KEY_ROLE_idx` (`Role_Id`),
+  CONSTRAINT `FK_USER_ROLE_KEY_ROLE` FOREIGN KEY (`Role_Id`) REFERENCES `roles` (`Role_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_USER_ROLE_KEY_USER` FOREIGN KEY (`User_Id`) REFERENCES `users` (`User_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_role`
+--
+
+LOCK TABLES `user_role` WRITE;
+/*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
+INSERT INTO `user_role` VALUES (1,1,1);
+/*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `User_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Gender` char(1) NOT NULL,
+  `Profile_Image` varchar(100) DEFAULT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Is_Active` char(1) DEFAULT 'N',
+  PRIMARY KEY (`User_Id`),
+  UNIQUE KEY `Email_UNIQUE` (`Email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Vinit','$2a$08$nJM2yH4ppNDIWW4V8tv4Kua50tPAXjzPu1Q1GsM17WTMecNJMgnT6','Y',NULL,'vyasvineet18@gmail.com','Y');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping events for database 'gtuapp'
+--
+
+--
+-- Dumping routines for database 'gtuapp'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-03-16  8:42:54
